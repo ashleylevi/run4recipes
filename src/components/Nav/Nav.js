@@ -11,23 +11,24 @@ class Nav extends Component {
   }
 
   async fetchRecipes(category) {
-    if (category === 'all') {
+    const { loadAllRecipes, loadPastaRecipes, loadPotatoRecipes, loadBreadRecipes, allRecipes, pastaRecipes, potatoRecipes, breadRecipes } = this.props;
+    if (allRecipes.length === 0 && category === 'allRecipes') {
       const pastaRecipes = await fetchPastaRecipes()
       const potatoRecipes = await fetchPotatoRecipes()
       const breadRecipes = await fetchBreadRecipes()
-      this.props.loadAllRecipes(pastaRecipes, potatoRecipes, breadRecipes)
+      loadAllRecipes(pastaRecipes, potatoRecipes, breadRecipes)    
     }
-    if (category === 'pasta') {
+    if (pastaRecipes.length === 0 && category === 'pasta') {
       const pastaRecipes = await fetchPastaRecipes()
-      this.props.loadPastaRecipes(pastaRecipes)
+      loadPastaRecipes(pastaRecipes)
     }
-    if (category === 'potatoes') {
+    if (potatoRecipes.length === 0 && category === 'potatoes') {
       const potatoRecipes = await fetchPotatoRecipes()
-      this.props.loadPotatoRecipes(potatoRecipes)
+      loadPotatoRecipes(potatoRecipes)
     }
-    if (category === 'bread') {
+    if (breadRecipes.length === 0 &&category === 'bread') {
       const breadRecipes = await fetchBreadRecipes()
-      this.props.loadBreadRecipes(breadRecipes)
+      loadBreadRecipes(breadRecipes)
     }
   }
   
@@ -51,6 +52,13 @@ class Nav extends Component {
   }
 }
 
+export const mapStateToProps = (state) => ({
+  allRecipes: state.allRecipes,
+  pastaRecipes: state.pastaRecipes,
+  potatoRecipes: state.potatoRecipes,
+  breadRecipes: state.breadRecipes
+})
+
 export const mapDispatchToProps = (dispatch) => ({
   loadAllRecipes: (recipes1, recipes2, recipes3) => dispatch(loadAllRecipes(recipes1, recipes2, recipes3)),
   loadPastaRecipes: (recipes) => dispatch(loadPastaRecipes(recipes)),
@@ -58,4 +66,4 @@ export const mapDispatchToProps = (dispatch) => ({
   loadBreadRecipes: (recipes) => dispatch(loadBreadRecipes(recipes))
 })
 
-export default connect(null, mapDispatchToProps)(Nav)
+export default connect(mapStateToProps, mapDispatchToProps)(Nav)
