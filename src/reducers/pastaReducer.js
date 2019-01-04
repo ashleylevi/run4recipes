@@ -1,14 +1,14 @@
-export const recipesReducer = (state = [], action) => {
+export const pastaReducer = (state = [], action) => {
   switch (action.type) {
-    case 'LOAD_RECIPES':
-      const cleanRecipes = action.recipes.map((recipe) => {
+    case 'LOAD_PASTA_RECIPES':
+      const cleanPastaRecipes = action.recipes.map((recipe) => {
         return {
           name: recipe.recipe.label,
           image: recipe.recipe.image,
           ingredients: recipe.recipe.ingredientLines
         }
       })
-      return [...state, ...cleanRecipes]
+      return [...state, ...cleanPastaRecipes]
     default:
       return state
   }

@@ -1,0 +1,25 @@
+.nav-bar {
+  border-top: 4px solid #3D323E;
+  border-bottom: 4px solid #3D323E;
+  height: 50px;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+button {
+  border: none;
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 15px;
+  color: #3D323E;
+  margin-right: 80px;
+}
+
+button:hover {
+  cursor: pointer;
+  color: #D5AD47;
+}
