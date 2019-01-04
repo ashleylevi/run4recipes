@@ -3,7 +3,9 @@ import { recipesReducer } from './recipesReducer'
 import { loadingReducer } from './loadingReducer'
 
 const rootReducer = combineReducers({
-  allRecipes: recipesReducer,
+  pastaRecipes: recipesReducer,
+  potatoRecipes: recipesReducer,
+  breadRecipes: recipesReducer,
   loading: loadingReducer
 })
 
