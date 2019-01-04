@@ -19,11 +19,11 @@ class App extends Component {
 
         <RecipesContainer />
         <Nav />
-        {/* <Switch>
+        <Switch>
           <Route 
             exact
-            path='/' 
-            component={App}
+            path='/allRecipes' 
+            component={RecipesContainer}
           />
           <Route
             path='/pasta'
@@ -37,7 +37,7 @@ class App extends Component {
           <Route 
             path='/bread'
             component={RecipesContainer} />
-        </Switch> */}
+        </Switch>
       </div>
     );
   }

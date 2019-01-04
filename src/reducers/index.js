@@ -1,11 +1,15 @@
 import { combineReducers } from 'redux';
-import { recipesReducer } from './recipesReducer'
-import { loadingReducer } from './loadingReducer'
+import { pastaReducer } from './pastaReducer';
+import { potatoReducer } from './potatoReducer';
+import { breadReducer } from './breadReducer';
+import { loadingReducer } from './loadingReducer';
+import { allRecipesReducer } from './allRecipesReducer';
 
 const rootReducer = combineReducers({
-  pastaRecipes: recipesReducer,
-  potatoRecipes: recipesReducer,
-  breadRecipes: recipesReducer,
+  allRecipes: allRecipesReducer,
+  pastaRecipes: pastaReducer,
+  potatoRecipes: potatoReducer,
+  breadRecipes: breadReducer,
   loading: loadingReducer
 })
 

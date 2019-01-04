@@ -1,3 +1,10 @@
+export const loadAllRecipes = (recipes1, recipes2, recipes3) => ({
+  type: 'LOAD_ALL_RECIPES',
+  recipes1,
+  recipes2,
+  recipes3
+})
+
 export const loadPastaRecipes = (recipes) => ({
   type: 'LOAD_PASTA_RECIPES',
   recipes
