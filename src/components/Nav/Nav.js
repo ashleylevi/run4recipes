@@ -4,6 +4,7 @@ import { fetchPastaRecipes, fetchPotatoRecipes, fetchBreadRecipes } from '../../
 import { loadAllRecipes, loadPastaRecipes, loadPotatoRecipes, loadBreadRecipes } from '../../actions/index';
 import './Nav.css';
 import { connect } from 'react-redux';
+// import { fetchPastaRecipes } from '../../thunks/loadPastaRecipes'
 
 class Nav extends Component {
   constructor() {

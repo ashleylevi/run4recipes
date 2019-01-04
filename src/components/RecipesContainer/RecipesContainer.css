@@ -1,0 +1,7 @@
+.recipes-container {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, 254px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 30px auto;
+}
