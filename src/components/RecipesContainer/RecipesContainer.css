@@ -1,26 +1,7 @@
-.header {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.title {
-  font-family: 'Courgette', cursive;
-  color: #32636E;
-  font-weight: normal;
-  font-size: 60px;
-  margin-bottom: 0px;
-}
-
-.slogan {
-  font-family: 'Raleway', sans-serif;
-  font-weight: bold;
-  font-size: 20px;
-  color: #D5AD47;
-}
-
-.main-logo {
-  width: 18px;
-  height: 20px;
+.recipes-container {
+  display: grid;
+    grid-template-columns: repeat(auto-fit, 254px);
+    grid-gap: 20px;
+    justify-content: center;
+    margin: 30px auto;
 }

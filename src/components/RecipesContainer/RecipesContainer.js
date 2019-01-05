@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { fetchPastaRecipes } from '../../utils/apiCalls';
-import { loadPastaRecipes, loadPotatoRecipes, loadBreadRecipes } from '../../actions/index';
 import { connect } from 'react-redux';
-import './RecipesContainer.css'
+import './RecipesContainer.css';
+import { uid } from 'react-uid';
+import { RecipeCard } from '../RecipeCard/RecipeCard';
+import { fetchPastaThunk } from '../../thunks/loadPastaRecipes';
+import { fetchPotatoThunk } from '../../thunks/loadPotatoRecipes';
+import { fetchBreadThunk } from '../../thunks/loadBreadRecipes';
 
 class RecipesContainer extends Component {
   constructor() {
@@ -10,27 +13,44 @@ class RecipesContainer extends Component {
   }
 
   async componentDidMount() {
-  //  const recipes = await fetchPastaRecipes()
-  //  this.props.loadPastaRecipes(recipes)
+    this.props.fetchPastaThunk()
+    this.props.fetchPotatoThunk()
+    this.props.fetchBreadThunk()
   }
 
   render() {
+    const { pastaRecipes, potatoRecipes, breadRecipes, match } = this.props;
+    let recipes;
+    if (match.path !== '/') {
+      const str = match.path.substring(1);
+      recipes = this.props[`${str}Recipes`];
+    } else {
+      recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
+    }
+
+    const recipesToDisplay = recipes.map((recipe) => {
+      return (<RecipeCard recipe={recipe} key={uid(recipe)}/>)
+    })
+    
     return (
       <div className="recipes-container">
-        <div className="header">
-        <h1 className="title">run4recipes</h1>
-        <h2 className="slogan">HIGH CARB MEAL IDEAS <img src='./images/runner.png' alt="runner" className='main-logo'></img> TO FUEL ANY RUN</h2>
-      </div>
+        { recipesToDisplay }
       </div>
     )
   }
 }
 
-// export const mapDispatchToProps = (dispatch) => ({
-//   loadPastaRecipes: (recipes) => dispatch(loadPastaRecipes(recipes)),
-//   loadPotatoRecipes: (recipes) => dispatch(loadPotatoRecipes(recipes)),
-//   loadBreadRecipes: (recipes) => dispatch(loadBreadRecipes(recipes))
-// })
 
-// export default connect(null, mapDispatchToProps)(RecipesContainer)
-export default RecipesContainer
+export const mapStateToProps = (state) => ({
+  pastaRecipes: state.pastaRecipes,
+  potatoRecipes: state.potatoRecipes,
+  breadRecipes: state.breadRecipes
+})
+
+export const mapDispatchToProps = (dispatch) => ({
+  fetchPastaThunk: () => dispatch(fetchPastaThunk()),
+  fetchPotatoThunk: () => dispatch(fetchPotatoThunk()),
+  fetchBreadThunk: () => dispatch(fetchBreadThunk())
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer)
