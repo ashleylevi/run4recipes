@@ -29,28 +29,41 @@ class App extends Component {
             }}
           />
           <Route
+            exact
             path='/pasta'
             component={RecipesContainer}
             />
-           <Route
+          <Route
             exact
             path='/pasta/:name'
             render={({ location }) => {
-              const recipe = this.props.pastaRecipes.find((pasta) => {
-                return pasta.name === location.pathname
-              })
-              return <RecipeDetails {...recipe}/>
-  
+              return <RecipeDetails />
             }}
             />
           <Route
+            exact
             path='/potato'
             component={RecipesContainer}
           />
+          <Route
+            exact
+            path='/potato/:name'
+            render={({ location }) => {
+              return <RecipeDetails />
+            }}
+            />
           <Route 
+            exact
             path='/bread'
             component={RecipesContainer} 
           />
+          <Route
+            exact
+            path='/bread/:name'
+            render={({ location }) => {
+              return <RecipeDetails />
+            }}
+            />
           <Route
             path='/favorites'
             component={favoritesContainer} 
@@ -59,6 +72,13 @@ class App extends Component {
             exact path='/'
             component={RecipesContainer} 
           />
+          <Route
+            exact
+            path='/:name'
+            render={({ location }) => {
+              return <RecipeDetails />
+            }}
+            />
           <Route 
             path='/'
             render={() => {
