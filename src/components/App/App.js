@@ -5,6 +5,7 @@ import Nav from '../Nav/Nav';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
+import RecipeDetails from '../RecipeDetails/RecipeDetails';
 
 class App extends Component {
   constructor() {
@@ -28,22 +29,56 @@ class App extends Component {
             }}
           />
           <Route
+            exact
             path='/pasta'
             component={RecipesContainer}
-          />
+            />
           <Route
+            exact
+            path='/pasta/:name'
+            render={({ location }) => {
+              return <RecipeDetails />
+            }}
+            />
+          <Route
+            exact
             path='/potato'
             component={RecipesContainer}
           />
+          <Route
+            exact
+            path='/potato/:name'
+            render={({ location }) => {
+              return <RecipeDetails />
+            }}
+            />
           <Route 
+            exact
             path='/bread'
-            component={RecipesContainer} />
-            <Route
-              path='/favorites'
-              component={favoritesContainer} />
+            component={RecipesContainer} 
+          />
+          <Route
+            exact
+            path='/bread/:name'
+            render={({ location }) => {
+              return <RecipeDetails />
+            }}
+            />
+          <Route
+            path='/favorites'
+            component={favoritesContainer} 
+          />
           <Route 
             exact path='/'
-            component={RecipesContainer} />
+            component={RecipesContainer} 
+          />
+          <Route
+            exact
+            path='/:name'
+            render={({ location }) => {
+              return <RecipeDetails />
+            }}
+            />
           <Route 
             path='/'
             render={() => {
@@ -55,4 +90,10 @@ class App extends Component {
   }
 }
 
-export default withRouter(connect(null)(App))
+export const mapStateToProps = (state) => ({
+  pastaRecipes: state.pastaRecipes,
+  potatoRecipes: state.potatoRecipes,
+  breadRecipes: state.breadRecipes
+})
+
+export default withRouter(connect(mapStateToProps)(App))
