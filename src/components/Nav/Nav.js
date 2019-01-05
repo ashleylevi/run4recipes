@@ -19,6 +19,9 @@ const Nav = () => {
       <Link to={'/bread'}>
             <button className='bread-btn'>Bread</button>
       </Link>
+      <Link to={'/favorites'}>
+            <button className='favorites-btn'>Favorites</button>
+      </Link>
     </div>
   )
 }
