@@ -4,7 +4,8 @@ export const fetchPastaRecipes = async () => {
     const data = await response.json()
     return data.hits
   } catch(error) {
-    throw new Error()
+    console.log(error.message);
+    return [];
   }
 }
 
@@ -14,7 +15,8 @@ export const fetchPotatoRecipes = async () => {
     const data = await response.json()
     return data.hits
   } catch(error) {
-    throw new Error()
+    console.log(error.message);
+    return [];
   }
 }
 
@@ -24,6 +26,7 @@ export const fetchBreadRecipes = async () => {
     const data = await response.json()
     return data.hits
   } catch(error) {
-    throw new Error()
+    console.log(error.message);
+    return [];
   }
 }

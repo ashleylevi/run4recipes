@@ -1,49 +1,34 @@
 import React, { Component } from 'react';
-import { fetchPastaRecipes, fetchPotatoRecipes, fetchBreadRecipes } from '../../utils/apiCalls';
-import { loadAllRecipes, loadPastaRecipes, loadPotatoRecipes, loadBreadRecipes } from '../../actions/index';
 import { connect } from 'react-redux';
 import './RecipesContainer.css';
 import { uid } from 'react-uid';
 import { RecipeCard } from '../RecipeCard/RecipeCard';
+import { fetchPastaThunk } from '../../thunks/loadPastaRecipes';
+import { fetchPotatoThunk } from '../../thunks/loadPotatoRecipes';
+import { fetchBreadThunk } from '../../thunks/loadBreadRecipes';
 
 class RecipesContainer extends Component {
   constructor() {
     super()
   }
 
-
-
   async componentDidMount() {
-    const { allRecipes } = this.props;
-    // if recipesarray exist in local storage exists, don't make fetch just grab from local storage, else make fetch and save to local
-      const pastaRecipes = await fetchPastaRecipes()
-      this.storeArrayData('pasta', pastaRecipes)
-      const potatoRecipes = await fetchPotatoRecipes()
-      this.storeArrayData('potato', potatoRecipes)
-      const breadRecipes = await fetchBreadRecipes()
-      this.storeArrayData('bread', breadRecipes)
-      this.props.loadAllRecipes(pastaRecipes, potatoRecipes, breadRecipes)    
-  };
-
-  storeArrayData = (key, array) => {
-    localStorage.setItem(key, JSON.stringify(array));
-  };
+    this.props.fetchPastaThunk()
+    this.props.fetchPotatoThunk()
+    this.props.fetchBreadThunk()
+  }
 
   render() {
-    const { allRecipes, pastaRecipes, potatoRecipes, breadRecipes, match } = this.props;
-    let recipesArray;
-    if (!match) {
-      recipesArray = allRecipes
-    } else if (match.path === '/pasta') {
-      console.log('pasta')
-      recipesArray = pastaRecipes
-    } else if (match.path === '/potatoes') {
-      recipesArray = potatoRecipes
-    } else if (match.path === '/bread') {
-      recipesArray = breadRecipes
+    const { pastaRecipes, potatoRecipes, breadRecipes, match } = this.props;
+    let recipes;
+    if (match.path !== '/') {
+      const str = match.path.substring(1);
+      recipes = this.props[`${str}Recipes`];
+    } else {
+      recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
     }
 
-    const recipesToDisplay = recipesArray.map((recipe) => {
+    const recipesToDisplay = recipes.map((recipe) => {
       return (<RecipeCard recipe={recipe} key={uid(recipe)}/>)
     })
     
@@ -55,15 +40,17 @@ class RecipesContainer extends Component {
   }
 }
 
+
 export const mapStateToProps = (state) => ({
-  allRecipes: state.allRecipes,
   pastaRecipes: state.pastaRecipes,
   potatoRecipes: state.potatoRecipes,
   breadRecipes: state.breadRecipes
 })
 
 export const mapDispatchToProps = (dispatch) => ({
-  loadAllRecipes: (recipes1, recipes2, recipes3) => dispatch(loadAllRecipes(recipes1, recipes2, recipes3))
+  fetchPastaThunk: () => dispatch(fetchPastaThunk()),
+  fetchPotatoThunk: () => dispatch(fetchPotatoThunk()),
+  fetchBreadThunk: () => dispatch(fetchBreadThunk())
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(RecipesContainer)

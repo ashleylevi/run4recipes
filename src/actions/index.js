@@ -19,7 +19,3 @@ export const loadBreadRecipes = (recipes) => ({
   type: 'LOAD_BREAD_RECIPES',
   recipes
 })
-
-// export const displayRecipes = () => ({
-//   type: 'DISPLAY_RECIPES'
-// })

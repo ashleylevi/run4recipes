@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
 import RecipesContainer from './components/RecipesContainer/RecipesContainer';
-import { getRecipes } from './utils/apiCalls';
 import Nav from '../src/components/Nav/Nav';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
 
-
 class App extends Component {
   constructor() {
     super()
   }
-
 
   render() {
     return (
@@ -21,7 +18,6 @@ class App extends Component {
           <h2 className="slogan">HIGH CARB MEAL IDEAS <img src='./images/runner.png' alt="runner" className='main-logo'></img> TO FUEL ANY RUN</h2>
         </div>
         <Nav />
-        <RecipesContainer/>
         <Switch>
           <Route 
             exact
@@ -35,13 +31,21 @@ class App extends Component {
             component={RecipesContainer}
           />
           <Route
-            path='/potatoes'
+            path='/potato'
             component={RecipesContainer}
           />
   
           <Route 
             path='/bread'
             component={RecipesContainer} />
+          <Route 
+            exact path='/'
+            component={RecipesContainer} />
+          <Route 
+            path='/'
+            render={() => {
+              return <Redirect to='/' />
+          }} />
         </Switch>
       </div>
     );
