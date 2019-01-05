@@ -5,6 +5,7 @@ import Nav from '../Nav/Nav';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
+import { RecipeDetails } from '../RecipeDetails/RecipeDetails';
 
 class App extends Component {
   constructor() {
@@ -30,20 +31,35 @@ class App extends Component {
           <Route
             path='/pasta'
             component={RecipesContainer}
-          />
-          <Route
+            />
+           {/* <Route
+            exact
+            path='/pasta/:id'
+            render={({match}) => {
+              console.log('match')
+              const recipe = this.props.pastaRecipes.find((pasta) => {
+                return pasta.name === match.params.id
+              })
+              return <RecipeDetails {...recipe}/>
+  
+            }}
+            />
+          <Route */}
             path='/potato'
             component={RecipesContainer}
           />
           <Route 
             path='/bread'
-            component={RecipesContainer} />
-            <Route
-              path='/favorites'
-              component={favoritesContainer} />
+            component={RecipesContainer} 
+          />
+          <Route
+            path='/favorites'
+            component={favoritesContainer} 
+          />
           <Route 
             exact path='/'
-            component={RecipesContainer} />
+            component={RecipesContainer} 
+          />
           <Route 
             path='/'
             render={() => {
@@ -54,5 +70,11 @@ class App extends Component {
     );
   }
 }
+
+export const mapStateToProps = (state) => ({
+  pastaRecipes: state.pastaRecipes,
+  potatoRecipes: state.potatoRecipes,
+  breadRecipes: state.breadRecipes
+})
 
 export default withRouter(connect(null)(App))

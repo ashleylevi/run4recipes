@@ -6,6 +6,7 @@ import { RecipeCard } from '../RecipeCard/RecipeCard';
 import { fetchPastaThunk } from '../../thunks/loadPastaRecipes';
 import { fetchPotatoThunk } from '../../thunks/loadPotatoRecipes';
 import { fetchBreadThunk } from '../../thunks/loadBreadRecipes';
+import { Link } from 'react-router-dom';
 
 class RecipesContainer extends Component {
   constructor() {
@@ -29,7 +30,7 @@ class RecipesContainer extends Component {
     }
 
     const recipesToDisplay = recipes.map((recipe) => {
-      return (<RecipeCard recipe={recipe} key={uid(recipe)}/>)
+      return (<Link to={`/${recipes}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
     })
     
     return (

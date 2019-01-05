@@ -8,7 +8,7 @@ export const fetchBreadThunk = () => {
       const response = await fetch(`https://cors-anywhere.herokuapp.com/https://api.edamam.com/search?q=bread&app_id=0f8e1af8&app_key=${key}`)
       const recipes = await response.json()
       dispatch(loadBreadRecipes(recipes.hits)) 
-      // localStorage.setItem(bread, JSON.stringify(recipes));    
+      // localStorage.setItem('bread', JSON.stringify(recipes.hits));  
     } catch(error) {
       console.log(error.message);
       return [];
