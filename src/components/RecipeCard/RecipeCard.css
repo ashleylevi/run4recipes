@@ -1,20 +1,56 @@
 .recipe-card {
-  border: 2px solid black;
+  border: .5px solid black;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 400px;
   width: 250px;
-  margin: 5px;
+  margin: 5px 5px 100px 5px;
   transition: 0.3s;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  overflow: hidden;
-  background: linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%)
+  /* overflow: hidden; */
+  /* background: linear-gradient(rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 100%) */
 }
 
-.recipe {
-  color: red;
+.gradient {
+  background-color: red;
+}
+
+.favorites-box {
+  position: absolute;
+  top: 350px;
+  left: 20px;
+  width: 200px;
+  height: 100px;
+  background: #FFF;
+  border: 3px solid #32636E;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.recipe-name {
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  font-size: 15px;
+  color: #3D323E;
+  text-align: center;
+  margin: 20px 0 10px 0;
+}
+
+.fa-heart {
+  margin: 0 auto;
+  font-size: 30px;
+  margin: 5px 0 10px 0;
+}
+
+.fa-heart:hover {
+  cursor: pointer;
+  color: #D5AD47;
 }
