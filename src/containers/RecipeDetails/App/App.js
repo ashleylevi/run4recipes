@@ -79,6 +79,10 @@ class App extends Component {
               return <RecipeDetails />
             }}
             />
+          <Route 
+            path='/'
+            component={RecipesContainer} 
+          />
         </Switch>
       </div>
     );
