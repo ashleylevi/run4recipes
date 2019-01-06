@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './RecipeCard.css';
+import PropTypes from 'prop-types';
 
 export class RecipeCard extends Component{
   constructor(props) {
@@ -45,23 +46,35 @@ export class RecipeCard extends Component{
           })
         localStorage.setItem('faves', JSON.stringify(newFavorites))       
       }
-    this.toggleFavorite()
-    updateFavorites()
+    this.toggleFavorite();
+    updateFavorites();
 
   } 
   
    
   render() {
     const { recipe } = this.props;
+    const { isFavorite } = this.state;
+    let heart;
+    if (!isFavorite) {
+      heart = "far fa-heart";
+    } else {
+      heart = "fas fa-heart";
+    }
     return (
       <div className="recipe-card" style={{ backgroundImage: `url(${recipe.image})` }}>
         <div className="gradient"></div>
         <div className="favorites-box">
           <p className="recipe-name">{recipe.name}</p>
-          <i class="far fa-heart" onClick={this.handleClick}></i>
+          <i class={heart} onClick={this.handleClick}></i>
         </div>
         
       </div>
     )
   }
+}
+
+RecipeCard.propTypes = {
+  recipe: PropTypes.object,
+  updateFavorites: PropTypes.func
 }
