@@ -11,13 +11,21 @@ import { Link, withRouter } from 'react-router-dom';
 class RecipesContainer extends Component {
   constructor() {
     super()
+    this.state = {
+      updateFavorites: false
+    }
   }
 
   async componentDidMount() {
-    console.log(this.props)
     this.props.fetchPastaThunk()
     this.props.fetchPotatoThunk()
     this.props.fetchBreadThunk()
+  }
+
+  updateFavorites = () => {
+    this.setState({
+      updateFavorites: true
+    })
   }
 
   render() {
@@ -28,48 +36,19 @@ class RecipesContainer extends Component {
     if (match.path !== '/' && match.path !== '/favorites') {
       recipes = this.props[`${str}Recipes`];
       recipesToDisplay = recipes.map((recipe) => {
-        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)
       })
     } else if (match.path === '/favorites') {
       const favorites = JSON.parse(localStorage.getItem('faves'))
       recipesToDisplay = favorites.map((recipe) => {
-        return <RecipeCard recipe={recipe} key={uid(recipe)}/>
+        return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
       }) 
     } else {
       recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
       recipesToDisplay = recipes.map((recipe) => {
-        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+        return (<Link to={`/${recipe.category}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)
       })
     }
-
-    
-
-    // const { pastaRecipes, potatoRecipes, breadRecipes, match } = this.props;
-    // let recipes;
-    // let str = match.path.substring(1);
-    // let recipesToDisplay;
-    // if (match.path !== '/') {
-    //   recipes = this.props[`${str}Recipes`];
-    //   recipesToDisplay = recipes.map((recipe) => {
-    //     return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
-    //   })
-    // } else if (match.path === '/') {
-    //   recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
-    //   recipesToDisplay = recipes.map((recipe) => {
-    //     return (<Link to={`/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
-    //   })
-    // } else if (match.path === '/favorites') {
-    //   const favorites = JSON.parse(localStorage.getItem('faves'))
-    //   recipes = favorites.map((card) => {
-    //     return <RecipeCard recipe={recipe} key={uid(recipe)}/>
-    //   })
-
-    // } else  {
-    //   recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
-    //   recipesToDisplay = recipes.map((recipe) => {
-    //     return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
-    //   })
-    // }
 
     return (
       <div className="recipes-container">

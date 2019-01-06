@@ -5,7 +5,8 @@ export const pastaReducer = (state = [], action) => {
         return {
           name: recipe.recipe.label,
           image: recipe.recipe.image,
-          ingredients: recipe.recipe.ingredientLines
+          ingredients: recipe.recipe.ingredientLines,
+          category: 'pasta'
         }
       })
       return [...state, ...cleanPastaRecipes]

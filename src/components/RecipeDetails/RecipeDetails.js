@@ -17,8 +17,8 @@ export const RecipeDetails = (props) => {
   } else {
     return (<Redirect to='/'/>)
   }
-  const recipe = category.find((pasta) => {
-    return pasta.name === props.match.params.name
+  const recipe = category.find((obj) => {
+    return obj.name === props.match.params.name
   })
     
   const ingredients = recipe.ingredients.map((ingredient) => {

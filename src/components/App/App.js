@@ -79,11 +79,6 @@ class App extends Component {
               return <RecipeDetails />
             }}
             />
-          <Route 
-            path='/'
-            render={() => {
-              return <Redirect to='/' />
-          }} />
         </Switch>
       </div>
     );
