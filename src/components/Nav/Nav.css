@@ -23,3 +23,7 @@ button:hover {
   cursor: pointer;
   color: #D5AD47;
 }
+
+.navLink .active {
+  color: red;
+}

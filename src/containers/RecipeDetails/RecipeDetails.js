@@ -1,6 +1,7 @@
 import React from 'react';
-import { Link, withRouter, Redirect } from 'react-router-dom';
-import { connect } from 'react-redux'
+import { withRouter, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 export const RecipeDetails = (props) => {
   let category;
@@ -45,3 +46,9 @@ const mapStateToProps = state => ({
 })
 
 export default withRouter(connect(mapStateToProps)(RecipeDetails))
+
+RecipeDetails.PropTypes = {
+  pastaRecipes: PropTypes.array,
+  potatoRecipes: PropTypes.array,
+  breadRecipes: PropTypes.array
+}

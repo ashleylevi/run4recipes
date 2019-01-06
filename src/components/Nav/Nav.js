@@ -1,8 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { loadAllRecipes, loadPastaRecipes, loadPotatoRecipes, loadBreadRecipes } from '../../actions/index';
 import './Nav.css';
-import { connect } from 'react-redux';
 
 const Nav = () => {
   return(
@@ -26,20 +24,4 @@ const Nav = () => {
   )
 }
   
-
-
-export const mapStateToProps = (state) => ({
-  allRecipes: state.allRecipes,
-  pastaRecipes: state.pastaRecipes,
-  potatoRecipes: state.potatoRecipes,
-  breadRecipes: state.breadRecipes
-})
-
-export const mapDispatchToProps = (dispatch) => ({
-  loadAllRecipes: (recipes1, recipes2, recipes3) => dispatch(loadAllRecipes(recipes1, recipes2, recipes3)),
-  loadPastaRecipes: (recipes) => dispatch(loadPastaRecipes(recipes)),
-  loadPotatoRecipes: (recipes) => dispatch(loadPotatoRecipes(recipes)),
-  loadBreadRecipes: (recipes) => dispatch(loadBreadRecipes(recipes))
-})
-
-export default connect(mapStateToProps, mapDispatchToProps)(Nav)
+export default Nav;

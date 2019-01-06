@@ -7,6 +7,7 @@ import { fetchPastaThunk } from '../../thunks/loadPastaRecipes';
 import { fetchPotatoThunk } from '../../thunks/loadPotatoRecipes';
 import { fetchBreadThunk } from '../../thunks/loadBreadRecipes';
 import { Link, withRouter } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 class RecipesContainer extends Component {
   constructor() {
@@ -40,9 +41,13 @@ class RecipesContainer extends Component {
       })
     } else if (match.path === '/favorites') {
       const favorites = JSON.parse(localStorage.getItem('faves'))
-      recipesToDisplay = favorites.map((recipe) => {
-        return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
-      }) 
+        if (!favorites.length) {
+          recipesToDisplay = <p className="no-favorites">You have no favorites</p>
+        } else {
+          recipesToDisplay = favorites.map((recipe) => {
+            return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
+          }) 
+        }
     } else {
       recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
       recipesToDisplay = recipes.map((recipe) => {
@@ -53,6 +58,9 @@ class RecipesContainer extends Component {
     return (
       <div className="recipes-container">
         { recipesToDisplay }
+        {
+          favorites.length === 0 && <h2 className="no-favorites">You Have No Favorites</h2>
+        }
       </div>
     )
   }
@@ -72,3 +80,12 @@ export const mapDispatchToProps = (dispatch) => ({
 })
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(RecipesContainer))
+
+RecipesContainer.propTypes = {
+  pastaRecipes: PropTypes.array,
+  potatoRecipes: PropTypes.array,
+  breadRecipes: PropTypes.array,
+  fetchPastaThunk: PropTypes.func,
+  fetchPotatoThunk: PropTypes.func,
+  fetchBreadThunk: PropTypes.func
+};

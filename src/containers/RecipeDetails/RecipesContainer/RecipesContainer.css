@@ -5,3 +5,8 @@
     justify-content: center;
     margin: 30px auto;
 }
+
+.no-favorites {
+  color: red;
+  font-size: 50px;
+}
