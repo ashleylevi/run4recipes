@@ -58,8 +58,7 @@ class RecipesContainer extends Component {
         //     isFavorite = true
         //   }
         // })
-        console.log(recipe)
-        return (<Link to={`/${recipe.catgeory}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} /></Link>)
+        return (<Link to={`/${recipe.category}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} /></Link>)
       })
     }
 
