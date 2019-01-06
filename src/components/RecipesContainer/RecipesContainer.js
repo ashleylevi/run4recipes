@@ -23,17 +23,54 @@ class RecipesContainer extends Component {
   render() {
     const { pastaRecipes, potatoRecipes, breadRecipes, match } = this.props;
     let recipes;
-    const str = match.path.substring(1);
-    if (match.path !== '/') {
+    let recipesToDisplay;
+    let str = match.path.substring(1);
+    if (match.path !== '/' && match.path !== '/favorites') {
       recipes = this.props[`${str}Recipes`];
+      recipesToDisplay = recipes.map((recipe) => {
+        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+      })
+    } else if (match.path === '/favorites') {
+      const favorites = JSON.parse(localStorage.getItem('faves'))
+      recipesToDisplay = favorites.map((recipe) => {
+        return <RecipeCard recipe={recipe} key={uid(recipe)}/>
+      }) 
     } else {
       recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
+      recipesToDisplay = recipes.map((recipe) => {
+        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+      })
     }
 
-    const recipesToDisplay = recipes.map((recipe) => {
-      return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
-    })
     
+
+    // const { pastaRecipes, potatoRecipes, breadRecipes, match } = this.props;
+    // let recipes;
+    // let str = match.path.substring(1);
+    // let recipesToDisplay;
+    // if (match.path !== '/') {
+    //   recipes = this.props[`${str}Recipes`];
+    //   recipesToDisplay = recipes.map((recipe) => {
+    //     return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+    //   })
+    // } else if (match.path === '/') {
+    //   recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
+    //   recipesToDisplay = recipes.map((recipe) => {
+    //     return (<Link to={`/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+    //   })
+    // } else if (match.path === '/favorites') {
+    //   const favorites = JSON.parse(localStorage.getItem('faves'))
+    //   recipes = favorites.map((card) => {
+    //     return <RecipeCard recipe={recipe} key={uid(recipe)}/>
+    //   })
+
+    // } else  {
+    //   recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
+    //   recipesToDisplay = recipes.map((recipe) => {
+    //     return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+    //   })
+    // }
+
     return (
       <div className="recipes-container">
         { recipesToDisplay }

@@ -66,7 +66,7 @@ class App extends Component {
             />
           <Route
             path='/favorites'
-            component={favoritesContainer} 
+            component={RecipesContainer} 
           />
           <Route 
             exact path='/'
