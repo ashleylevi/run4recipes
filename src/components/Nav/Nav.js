@@ -1,25 +1,25 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './Nav.css';
 
 const Nav = () => {
   return(
     <div className="nav-bar">
-      <Link to={'/allRecipes'}>
+      <NavLink to={'/allRecipes'} activeStyle={{ color: 'red' }} className="nav-link">
             <button className='all-btn'>All Recipes</button>
-      </Link>
-      <Link to={'/pasta'}>
+      </NavLink>
+      <NavLink to={'/pasta'} activeStyle={{ color: 'red' }}>
             <button className='pasta-btn'>Pasta</button>
-      </Link>
-      <Link to={'/potato'}>
+      </NavLink>
+      <NavLink to={'/potato'} activeStyle={{ color: 'red' }}>
             <button className='potatoes-btn'>Potatoes</button>
-      </Link>
-      <Link to={'/bread'}>
+      </NavLink>
+      <NavLink to={'/bread'} activeStyle={{ color: 'red' }}>
             <button className='bread-btn'>Bread</button>
-      </Link>
-      <Link to={'/favorites'}>
+      </NavLink>
+      <NavLink to={'/favorites'} activeStyle={{ color: 'red' }}>
             <button className='favorites-btn'>Favorites</button>
-      </Link>
+      </NavLink>
     </div>
   )
 }

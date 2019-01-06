@@ -35,6 +35,7 @@ class RecipesContainer extends Component {
     let recipesToDisplay;
     let str = match.path.substring(1);
     if (match.path !== '/' && match.path !== '/favorites') {
+      console.log('hi')
       recipes = this.props[`${str}Recipes`];
       recipesToDisplay = recipes.map((recipe) => {
         return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)
@@ -42,7 +43,7 @@ class RecipesContainer extends Component {
     } else if (match.path === '/favorites') {
       const favorites = JSON.parse(localStorage.getItem('faves'))
         if (!favorites.length) {
-          recipesToDisplay = <p className="no-favorites">You have no favorites</p>
+          recipesToDisplay = "You have no favorites!"
         } else {
           recipesToDisplay = favorites.map((recipe) => {
             return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
@@ -58,9 +59,6 @@ class RecipesContainer extends Component {
     return (
       <div className="recipes-container">
         { recipesToDisplay }
-        {
-          favorites.length === 0 && <h2 className="no-favorites">You Have No Favorites</h2>
-        }
       </div>
     )
   }
