@@ -5,7 +5,7 @@ import './Nav.css';
 const Nav = () => {
   return(
     <div className="nav-bar">
-      <NavLink to={'/allRecipes'} activeStyle={{ color: 'red' }}>
+      <NavLink to={'/allRecipes'} activeStyle={{ color: 'red' }} className="nav-link">
             <button className='all-btn'>All Recipes</button>
       </NavLink>
       <NavLink to={'/pasta'} activeStyle={{ color: 'red' }}>
