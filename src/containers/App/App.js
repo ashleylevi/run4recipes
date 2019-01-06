@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import RecipesContainer from '../RecipesContainer/RecipesContainer';
-import favoritesContainer from '../RecipesContainer/RecipesContainer';
-import Nav from '../Nav/Nav';
+import Nav from '../../components/Nav/Nav';
 import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import './App.css';
