@@ -14,7 +14,6 @@ class RecipesContainer extends Component {
   }
 
   async componentDidMount() {
-    console.log(this.props)
     this.props.fetchPastaThunk()
     this.props.fetchPotatoThunk()
     this.props.fetchBreadThunk()
@@ -28,17 +27,39 @@ class RecipesContainer extends Component {
     if (match.path !== '/' && match.path !== '/favorites') {
       recipes = this.props[`${str}Recipes`];
       recipesToDisplay = recipes.map((recipe) => {
-        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+        // let isFavorite = false;
+        // const favoritesFromStorage = JSON.parse(localStorage.getItem('faves'))
+        // favoritesFromStorage.map((faveRecipe) => {
+        //   if (recipe.name === faveRecipe.name) {
+        //     isFavorite = true
+        //   }
+        // })
+        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} /></Link>)
       })
     } else if (match.path === '/favorites') {
       const favorites = JSON.parse(localStorage.getItem('faves'))
       recipesToDisplay = favorites.map((recipe) => {
+        // let isFavorite = false;
+        // const favoritesFromStorage = JSON.parse(localStorage.getItem('faves'))
+        // favoritesFromStorage.map((faveRecipe) => {
+        //   if (recipe.name === faveRecipe.name) {
+        //     isFavorite = true
+        //   }
+        // })
         return <RecipeCard recipe={recipe} key={uid(recipe)}/>
       }) 
     } else {
       recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
       recipesToDisplay = recipes.map((recipe) => {
-        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)}/></Link>)
+        // let isFavorite = false;
+        // const favoritesFromStorage = JSON.parse(localStorage.getItem('faves'))
+        // favoritesFromStorage.map((faveRecipe) => {
+        //   if (recipe.name === faveRecipe.name) {
+        //     isFavorite = true
+        //   }
+        // })
+        console.log(recipe)
+        return (<Link to={`/${recipe.catgeory}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} /></Link>)
       })
     }
 
