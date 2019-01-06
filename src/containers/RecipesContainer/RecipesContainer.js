@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import './RecipesContainer.css';
 import { uid } from 'react-uid';
-import { RecipeCard } from '../RecipeCard/RecipeCard';
+import { RecipeCard } from '../../components/RecipeCard/RecipeCard';
 import { fetchPastaThunk } from '../../thunks/loadPastaRecipes';
 import { fetchPotatoThunk } from '../../thunks/loadPotatoRecipes';
 import { fetchBreadThunk } from '../../thunks/loadBreadRecipes';
