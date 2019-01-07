@@ -7,6 +7,7 @@ import { fetchPastaThunk } from '../../thunks/loadPastaRecipes';
 import { fetchPotatoThunk } from '../../thunks/loadPotatoRecipes';
 import { fetchBreadThunk } from '../../thunks/loadBreadRecipes';
 import { Link, withRouter } from 'react-router-dom';
+import { Loading } from '../../components/Loading/Loading';
 import PropTypes from 'prop-types';
 
 class RecipesContainer extends Component {
@@ -30,47 +31,52 @@ class RecipesContainer extends Component {
   }
 
   render() {
-    const { pastaRecipes, potatoRecipes, breadRecipes, match } = this.props;
+    const { pastaRecipes, potatoRecipes, breadRecipes, match, isLoading } = this.props;
     let recipes;
     let recipesToDisplay;
     let str = match.path.substring(1);
-    if (match.path !== '/' && match.path !== '/favorites') {
-      recipes = this.props[`${str}Recipes`];
-      recipesToDisplay = recipes.map((recipe) => {
-        return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)
-      })
-    } else if (match.path === '/favorites') {
-      const favorites = JSON.parse(localStorage.getItem('faves'))
-        if (favorites === null) {
-          recipesToDisplay = <p className="no-favorites">You have no favorites!</p>
-        }
-        else if (!favorites.length) {
-          recipesToDisplay = <p className="no-favorites">You have no favorites!</p>
-        } else {
-          recipesToDisplay = favorites.map((recipe) => {
-            return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
-          }) 
-        }
+    if (isLoading) {
+      return <Loading />
     } else {
-      recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
-      recipesToDisplay = recipes.map((recipe) => {
-        return (<Link to={`/${recipe.category}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)
-      })
+      if (match.path !== '/' && match.path !== '/favorites') {
+        recipes = this.props[`${str}Recipes`];
+        recipesToDisplay = recipes.map((recipe) => {
+          return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)
+        })
+      } else if (match.path === '/favorites') {
+        const favorites = JSON.parse(localStorage.getItem('faves'))
+          if (favorites === null) {
+            recipesToDisplay = <p className="no-favorites">You have no favorites!</p>
+          }
+          else if (!favorites.length) {
+            recipesToDisplay = <p className="no-favorites">You have no favorites!</p>
+          } else {
+            recipesToDisplay = favorites.map((recipe) => {
+              return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
+            }) 
+          }
+      } else {
+        recipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
+        recipesToDisplay = recipes.map((recipe) => {
+          return (<Link to={`/${recipe.category}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)
+        })
+      }
+  
+      return (
+        <div className="recipes-container">
+          { recipesToDisplay }
+        </div>
+      )
     }
-
-    return (
-      <div className="recipes-container">
-        { recipesToDisplay }
-      </div>
-    )
   }
-}
+    }
 
 
 export const mapStateToProps = (state) => ({
   pastaRecipes: state.pastaRecipes,
   potatoRecipes: state.potatoRecipes,
-  breadRecipes: state.breadRecipes
+  breadRecipes: state.breadRecipes,
+  isLoading: state.isLoading
 })
 
 export const mapDispatchToProps = (dispatch) => ({
@@ -85,6 +91,7 @@ RecipesContainer.propTypes = {
   pastaRecipes: PropTypes.array,
   potatoRecipes: PropTypes.array,
   breadRecipes: PropTypes.array,
+  isLoading: PropTypes.boolean,
   fetchPastaThunk: PropTypes.func,
   fetchPotatoThunk: PropTypes.func,
   fetchBreadThunk: PropTypes.func
