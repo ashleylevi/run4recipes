@@ -35,7 +35,6 @@ class RecipesContainer extends Component {
     let recipesToDisplay;
     let str = match.path.substring(1);
     if (match.path !== '/' && match.path !== '/favorites') {
-      console.log('hi')
       recipes = this.props[`${str}Recipes`];
       recipesToDisplay = recipes.map((recipe) => {
         return (<Link to={`/${str}/${recipe.name}`}><RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites} /></Link>)

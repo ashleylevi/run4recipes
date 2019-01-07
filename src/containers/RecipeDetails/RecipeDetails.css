@@ -1,0 +1,32 @@
+.recipe-title {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  color: #32636E;
+  margin-top: 40px;
+  font-weight: 700;
+}
+
+.recipe-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px 0 40px 0;
+}
+
+.img {
+  border: 1px solid black;
+  height: 400px;
+  width: 300px;
+}
+
+li {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 19px;
+  color: #3D323E;
+}
+
+ul {
+  margin-top: 0;
+}
