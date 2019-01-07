@@ -11,12 +11,12 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  /* filter: blur(1px) */
 }
 
 a {
   text-decoration: none;
-  color: black;
+  color: #3D323E;
+  transition: 0.3s;
 }
 
 .favorites-box {
@@ -48,6 +48,7 @@ a {
   margin: 0 auto;
   font-size: 30px;
   margin: 5px 0 10px 0;
+  transition: 0.3s;
 }
 
 .fa-heart:hover {
@@ -57,4 +58,5 @@ a {
 
 .fas {
   color: #D5AD47;
+  transition: 0.3s;
 }

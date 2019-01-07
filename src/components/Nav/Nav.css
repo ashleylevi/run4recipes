@@ -10,7 +10,7 @@
   margin-top: 40px;
 }
 
-button {
+.nav-link {
   border: none;
   font-family: Raleway;
   font-weight: bold;
@@ -19,11 +19,11 @@ button {
   margin-right: 80px;
 }
 
-button:hover {
+.nav-link:hover {
   cursor: pointer;
   color: #D5AD47;
 }
 
-.navLink .active {
-  color: red;
+.active {
+  font-weight: 700;
 }
