@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import './RecipeDetails.css';
 
 export const RecipeDetails = (props) => {
   let category;
@@ -23,18 +24,16 @@ export const RecipeDetails = (props) => {
   })
     
   const ingredients = recipe.ingredients.map((ingredient) => {
-    return ingredient
+    return <li><p className="ingredient">{ingredient}</p></li>
   })
 
   return (
-    <div>
-      <h1>{recipe.name}</h1>
-      <img src={recipe.image}/>
-      <div>{ingredients}</div>
-
-      {/* <Link to={`/${name}`} className='back-btn'>◀ back</Link> */}
-      {/* <img src={image} className='app-img-no-hover'/>
-      <p className='creature-bio'>{bio}</p> */}
+    <div className="ingredients-div">
+      <h1 className="recipe-title">{recipe.name}</h1>
+      <div className="recipe-div">
+        <img src={recipe.image} className="img"/>
+        <ul className="recipe-ingredients">{ingredients}</ul>
+      </div>
     </div>
   )
 }
