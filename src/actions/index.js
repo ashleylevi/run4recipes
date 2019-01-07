@@ -24,3 +24,8 @@ export const loading = (bool) => ({
   type: "LOADING",
   bool
 })
+
+export const searchRecipes = (searchValue) => ({
+  type: "SEARCH_RECIPES",
+  searchValue
+})
