@@ -19,3 +19,8 @@ export const loadBreadRecipes = (recipes) => ({
   type: 'LOAD_BREAD_RECIPES',
   recipes
 })
+
+export const loading = (bool) => ({
+  type: "LOADING",
+  bool
+})
