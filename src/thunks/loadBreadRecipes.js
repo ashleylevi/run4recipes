@@ -1,5 +1,5 @@
 import { loadBreadRecipes } from '../actions/index';
-import { loading } from '../actions/index';
+import { loading, isError } from '../actions/index';
 import { key } from '../apikey';
 
 export const fetchBreadThunk = () => {
@@ -11,8 +11,7 @@ export const fetchBreadThunk = () => {
       dispatch(loadBreadRecipes(recipes.hits)) 
       dispatch(loading(false))
     } catch(error) {
-      console.log(error.message);
-      return [];
+      dispatch(isError(true))
     }
   }
 }

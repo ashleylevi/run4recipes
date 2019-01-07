@@ -43,10 +43,14 @@ class RecipesContainer extends Component {
   }
 
   render() {
-    const { pastaRecipes, potatoRecipes, breadRecipes, match, isLoading, searchValue } = this.props;
+    const { pastaRecipes, potatoRecipes, breadRecipes, match, isLoading, searchValue, isError } = this.props;
     let recipes;
     let recipesToDisplay;
     let str = match.path.substring(1);
+    if (isError && !isLoading) {
+      recipesToDisplay = <p className="sorry">Sorry, something went wrong</p>
+      return recipesToDisplay
+    }
     if (isLoading) {
       return <Loading />
     } else {
@@ -96,7 +100,8 @@ export const mapStateToProps = (state) => ({
   potatoRecipes: state.potatoRecipes,
   breadRecipes: state.breadRecipes,
   isLoading: state.isLoading,
-  searchValue: state.searchValue
+  searchValue: state.searchValue,
+  isError: state.isError
 })
 
 export const mapDispatchToProps = (dispatch) => ({
