@@ -30,7 +30,7 @@ describe('actions', () => {
     expect(result).toEqual(expected)
   })
   it('should return a type of LOADING with a boolean', () => {
-    const bool =  false
+    const bool = false
     const expected = {
       type: 'LOADING',
       bool
@@ -38,13 +38,22 @@ describe('actions', () => {
     const result = actions.loading(bool)
     expect(result).toEqual(expected)
   })
-  it('should return a type of SEARCH_RECIPES', () => {
+  it('should return a type of SEARCH_RECIPES with search value', () => {
     const searchValue = 'kimchi'
     const expected = {
       type: 'SEARCH_RECIPES',
       searchValue
     }
     const result = actions.searchRecipes(searchValue)
+    expect(result).toEqual(expected)
+  })
+  it('should return a type of IS_ERROR with a boolean', () => {
+    const bool = false
+    const expected = {
+      type: 'IS_ERROR',
+      bool
+    }
+    const result = actions.isError(false)
     expect(result).toEqual(expected)
   })
 })

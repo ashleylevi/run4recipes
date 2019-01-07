@@ -14,11 +14,18 @@ export const loadBreadRecipes = (recipes) => ({
 })
 
 export const loading = (bool) => ({
-  type: "LOADING",
+  type: 'LOADING',
   bool
 })
 
 export const searchRecipes = (searchValue) => ({
-  type: "SEARCH_RECIPES",
+  type: 'SEARCH_RECIPES',
   searchValue
 })
+
+export const isError = (bool) => ({
+  type: 'IS_ERROR',
+  bool
+})
+
+

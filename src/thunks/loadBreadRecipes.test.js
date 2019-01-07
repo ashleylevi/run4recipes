@@ -1,9 +1,9 @@
 import { fetchBreadThunk } from './loadBreadRecipes';
-import { loading, loadBreadRecipes } from '../actions/index';
+import { loading, loadBreadRecipes, isError } from '../actions/index';
 import { key } from '../apikey';
 
 
-describe('fetchMovies', () => {
+describe('fetchBreadThunk', () => {
   let mockUrl
   let mockDispatch
   
@@ -18,10 +18,10 @@ describe('fetchMovies', () => {
       name: "Spaghetti and meatballs",
       image: "https://image.png",
       ingredients: [],
-      category: 'bread'
+      category: 'bread',
+      hits: []
     }]
     
-
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
       json: () => Promise.resolve({
@@ -29,40 +29,19 @@ describe('fetchMovies', () => {
       })
     }))
     
-    const thunk = fetchBreadThunk()
+    const thunk = fetchBreadThunk(mockUrl)
     await thunk(mockDispatch)
     expect(mockDispatch).toHaveBeenCalledWith(loading(false))
-    expect(mockDispatch).toHaveBeenCalledWith(loadBreadRecipes( {breadRecipes: mockRecipes}))
+    expect(mockDispatch).toHaveBeenCalledWith(loadBreadRecipes(mockRecipes.hits))
+    expect(mockDispatch).toHaveBeenCalledWith(loading(true))
+  })
+
+  it('should return an error message', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: false
+    }))
+    const thunk = fetchBreadThunk()
+    const result = await thunk(mockDispatch)
+    expect(mockDispatch).toHaveBeenCalledWith(isError(true))
   })
 })
-
-//   it('should dispatch loading(true)', async () => {
-//     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-//       ok: true
-//     }))
-    
-//     const thunk = fetchBreadThunk(mockUrl)
-//     await thunk(mockDispatch)
-//     expect(mockDispatch).toHaveBeenCalledWith(loading(true))
-//   })
-
-//   it('should dispatch loading(false) if the response is ok', async () => {
-//     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-//       ok: true
-//     }))
-    
-//     const thunk = fetchMovies(mockUrl)
-//     await thunk(mockDispatch)
-//     expect(mockDispatch).toHaveBeenCalledWith(loading(true))
-//   })
-
-//   it('should return an error message', async () => {
-//     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-//       ok: false
-//     }))
-//     const thunk = fetchMovies(mockUrl)
-//     const result = await thunk(mockDispatch)
-//     expect(result).toEqual('Error: something went wrong')
-//     expect(mockDispatch).toHaveBeenCalledWith(catchError(true))
-//   })
-// })
