@@ -11,6 +11,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  z-index: 0
 }
 
 .recipe-card::after {
@@ -66,16 +67,10 @@ a {
 }
 
 .gradient {
-    background: linear-gradient(
-      0deg,
-      rgba(0, 0, 0, 1) 0%,
-      rgba(0, 0, 0, 0.5060399159663865) 80%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    z-index: -1;
-    border-radius: 10%;
+  background: linear-gradient(to top, rgba(225,225,225,1) 0%,rgba(225,225,231,0.3) 41%,rgba(255,255,255,0) 100%);
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
   
 }

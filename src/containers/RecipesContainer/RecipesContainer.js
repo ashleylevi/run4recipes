@@ -52,7 +52,7 @@ class RecipesContainer extends Component {
             recipesToDisplay = <p className="no-favorites">You have no favorites!</p>
           } else {
             recipesToDisplay = favorites.map((recipe) => {
-              return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
+              return (<RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>)
             }) 
           }
       } else {
