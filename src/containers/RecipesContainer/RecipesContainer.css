@@ -7,6 +7,9 @@
 }
 
 .no-favorites {
-  color: red;
-  font-size: 50px;
+  font-size: 25px;
+  text-align: center; 
+  color: #32636E;
+  font-weight: 700;
+  margin-top: 50px;
 }

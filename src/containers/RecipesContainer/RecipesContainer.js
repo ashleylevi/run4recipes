@@ -42,8 +42,11 @@ class RecipesContainer extends Component {
       })
     } else if (match.path === '/favorites') {
       const favorites = JSON.parse(localStorage.getItem('faves'))
-        if (!favorites.length) {
-          recipesToDisplay = "You have no favorites!"
+        if (favorites === null) {
+          recipesToDisplay = <p className="no-favorites">You have no favorites!</p>
+        }
+        else if (!favorites.length) {
+          recipesToDisplay = <p className="no-favorites">You have no favorites!</p>
         } else {
           recipesToDisplay = favorites.map((recipe) => {
             return <RecipeCard recipe={recipe} key={uid(recipe)} updateFavorites={this.updateFavorites}/>
