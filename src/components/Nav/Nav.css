@@ -1,13 +1,31 @@
+.link {
+
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 40px; */
+}
+
 .nav-bar {
+  display: flex;
   border-top: 4px solid #3D323E;
   border-bottom: 4px solid #3D323E;
   height: 50px;
-  width: 80%;
+  width: 1050px;
+  margin: 0 auto;
+  margin-top: 40px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   margin: 0 auto;
   margin-top: 40px;
+}
+
+.search-div {
+  display: flex;
+  flex-direction: flex-end;
+  margin-left: 197px;
 }
 
 .nav-link {
