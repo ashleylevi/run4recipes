@@ -11,15 +11,9 @@ Users can view various recipes either by category type or by searching. Users ca
 ![screenshot3](https://user-images.githubusercontent.com/39889553/50809706-b4ee9200-12c2-11e9-9313-c79eef9dcbec.png)
 
 ### Tech Stack
-Redux
-
-React
-
-React Router
-
-Jest
-
-Enzyme
+* UI/UX built with with React & Router
+* Global asynchronous state with Redux and Redux Thunks
+* Tested with Enzyme & Jest
 
 ### Setup
 
