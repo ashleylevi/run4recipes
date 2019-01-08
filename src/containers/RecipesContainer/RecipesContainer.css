@@ -7,11 +7,11 @@
 }
 
 .no-favorites {
-  font-size: 25px;
   text-align: center; 
-  color: #32636E;
+  font-size: 25px;
+  color: #3D323E;
   font-weight: 700;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .sorry {

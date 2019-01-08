@@ -16,7 +16,7 @@ describe('RecipeCard', () => {
     wrapper = shallow(<RecipeCard recipe={mockRecipe} />);
   });
 
-  it('Should render like snapshot', () => {
+  it('Should match the snapshot snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 });
