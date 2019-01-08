@@ -38,7 +38,7 @@ export const RecipeDetails = (props) => {
   )
 }
 
-const mapStateToProps = state => ({
+export const mapStateToProps = state => ({
   pastaRecipes: state.pastaRecipes,
   potatoRecipes: state.potatoRecipes,
   breadRecipes: state.breadRecipes
@@ -46,7 +46,7 @@ const mapStateToProps = state => ({
 
 export default withRouter(connect(mapStateToProps)(RecipeDetails))
 
-RecipeDetails.PropTypes = {
+RecipeDetails.propTypes = {
   pastaRecipes: PropTypes.array,
   potatoRecipes: PropTypes.array,
   breadRecipes: PropTypes.array

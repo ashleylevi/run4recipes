@@ -1,10 +1,9 @@
 import { mapStateToProps } from './App'
 import { shallow } from 'enzyme'
 import App from './App'
-import React, { Component } from 'react'
+import React from 'react'
 
 describe('App', () => {
-  
   describe('App component', () => {
     const mockRecipes  = [{
           label: "Spaghetti and meatballs",
@@ -17,7 +16,7 @@ describe('App', () => {
       expect(wrapper).toMatchSnapshot()
     })
   })
-
+  
   describe('mapStateToProps', () => {
     it('should return an array with recipe objects', () => {
       const mockRecipes  = [{
