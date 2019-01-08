@@ -31,7 +31,6 @@ class RecipesContainer extends Component {
   }
 
   searchRecipes = (value) => {
-    console.log('searching')
     const { pastaRecipes, potatoRecipes, breadRecipes } = this.props;
     const allRecipes = [...pastaRecipes, ...breadRecipes, ...potatoRecipes];
     const matches = allRecipes.filter((recipe) => {
@@ -116,7 +115,9 @@ RecipesContainer.propTypes = {
   pastaRecipes: PropTypes.array,
   potatoRecipes: PropTypes.array,
   breadRecipes: PropTypes.array,
-  isLoading: PropTypes.boolean,
+  isLoading: PropTypes.bool,
+  searchValue: PropTypes.string,
+  isError: PropTypes.bool,
   fetchPastaThunk: PropTypes.func,
   fetchPotatoThunk: PropTypes.func,
   fetchBreadThunk: PropTypes.func

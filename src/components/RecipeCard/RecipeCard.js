@@ -66,7 +66,7 @@ export class RecipeCard extends Component{
         <div className="gradient"></div>
         <div className="favorites-box">
           <p className="recipe-name">{recipe.name}</p>
-          <i class={heart} onClick={this.handleClick}></i>
+          <i className={heart} onClick={this.handleClick}></i>
         </div>
         
       </div>

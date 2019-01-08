@@ -31,7 +31,7 @@ export const RecipeDetails = (props) => {
     <div className="ingredients-div">
       <h1 className="recipe-title">{recipe.name}</h1>
       <div className="recipe-div">
-        <img src={recipe.image} className="img"/>
+        <img src={recipe.image} className="img" alt="recipe"/>
         <ul className="recipe-ingredients">{ingredients}</ul>
       </div>
     </div>

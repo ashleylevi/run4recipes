@@ -1,6 +1,6 @@
 .loading-container {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 150px;
 }
 
 .lds-ring {
@@ -47,7 +47,7 @@
 .loading {
   text-align: center;
   font-family: 'Raleway';
-  font-size: 40px;
+  font-size: 30px;
   color: #3D323E;
   margin-top: 0;
   animation:blinkingText 0.8s infinite alternate;
