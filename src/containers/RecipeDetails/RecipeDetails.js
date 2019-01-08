@@ -14,7 +14,7 @@ export const RecipeDetails = (props) => {
     } else if (props.match.path.includes('bread')) {
       category = props.breadRecipes
     } else {
-      return 
+      return (<Redirect to='/'/>)
     }
   } else {
     return (<Redirect to='/'/>)
