@@ -15,7 +15,7 @@ class Search extends Component {
     this.setState({
       searchValue: e.target.value
     })
-    this.props.search(e.target.value.toLowerCase())
+    this.props.searchRecipes(e.target.value.toLowerCase())
   }
 
   render() {
@@ -36,7 +36,7 @@ class Search extends Component {
 }
 
 export const mapDispatchToProps = (dispatch) => ({
-  search: (searchValue) => dispatch(searchRecipes(searchValue))
+  searchRecipes: (searchValue) => dispatch(searchRecipes(searchValue))
 })
 
 export default connect(null, mapDispatchToProps)(Search)
