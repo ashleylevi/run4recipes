@@ -7,9 +7,13 @@ Users can view various recipes either by category type or by searching. Users ca
 
 ### Tech Stack
 Redux
+
 React
+
 React Router
+
 Jest
+
 Enzyme
 
 ### Demo
