@@ -1,17 +1,16 @@
 
 ## run4recipes
 
-The challenge of this project was to create a plausible app based on a random lottery of audience-type and API. My lottery ticket came up with Activists for the audience and the newsAPI for the endpoint.
+The challenge of this project was to create a user-friendly app based on a random lottery of audience-type and API. I recieved "runners" for my audience type and Edamam API for the endpoint.
 
-The concept I came up with is a sort of mash-up of Flipboard and Pinterest: Users can track what topics they care about and get notified of local gatherings for meetups with others that share similiar interests.
+Users can view various recipes either by category type or by searching. Users can click on recipes to access more details or add recipes to their favorites to view at a later time.
 
-### Project Goals
-
-Pull in articles from the newsAPI
-Allow users to save articles on issues that they care about
-Allow users to comment on interesting articles
-User can see a list of articles they follow.
-Users can see local meetups with others who follow and share interests in the same issues.
+### Tech Stack
+Redux
+React
+React Router
+Jest
+Enzyme
 
 ### Demo
 
