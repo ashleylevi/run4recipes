@@ -46,7 +46,7 @@ class RecipesContainer extends Component {
     let recipes;
     let recipesToDisplay;
     let str = match.path.substring(1);
-    if (isError && !isLoading) {
+    if (isError) {
       recipesToDisplay = <p className="sorry">Sorry, something went wrong</p>
       return recipesToDisplay
     }

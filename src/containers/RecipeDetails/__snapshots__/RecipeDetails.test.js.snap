@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecipeDetails RecipeDetails component Should match the snapshot 1`] = `
+exports[`RecipeDetails RecipeDetails component Should match the snapshot for bread 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RecipeDetails
@@ -9,33 +9,72 @@ ShallowWrapper {
         Object {
           "category": "bread",
           "image": "https://image.png",
-          "ingredientLines": Array [],
-          "label": "Spaghetti and meatballs",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread1",
+        },
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread2",
         },
       ]
     }
     match={
       Object {
-        "path": "",
+        "params": Object {
+          "name": "bread1",
+        },
+        "path": "bread",
       }
     }
     pastaRecipes={
       Array [
         Object {
-          "category": "bread",
+          "category": "pasta",
           "image": "https://image.png",
-          "ingredientLines": Array [],
-          "label": "Spaghetti and meatballs",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "Spaghetti and meatballs",
+        },
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "kimchi",
         },
       ]
     }
     potatoRecipes={
       Array [
         Object {
-          "category": "bread",
+          "category": "potato",
           "image": "https://image.png",
-          "ingredientLines": Array [],
-          "label": "Spaghetti and meatballs",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "mashed potatoes",
+        },
+        Object {
+          "category": "potato",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "baked potato",
         },
       ]
     }
@@ -48,9 +87,1598 @@ ShallowWrapper {
     "simulateEvent": [Function],
     "unmount": [Function],
   },
-  Symbol(enzyme.__node__): undefined,
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="recipe-title"
+        >
+          bread1
+        </h1>,
+        <div
+          className="recipe-div"
+        >
+          <img
+            alt="recipe"
+            className="img"
+            src="https://image.png"
+          />
+          <ul
+            className="recipe-ingredients"
+          >
+            <li>
+              <p
+                className="ingredient"
+              >
+                spaghetti
+              </p>
+            </li>
+            <li>
+              <p
+                className="ingredient"
+              >
+                meatballs
+              </p>
+            </li>
+          </ul>
+        </div>,
+      ],
+      "className": "ingredients-div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "bread1",
+          "className": "recipe-title",
+        },
+        "ref": null,
+        "rendered": "bread1",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="recipe"
+              className="img"
+              src="https://image.png"
+            />,
+            <ul
+              className="recipe-ingredients"
+            >
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  spaghetti
+                </p>
+              </li>
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  meatballs
+                </p>
+              </li>
+            </ul>,
+          ],
+          "className": "recipe-div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "recipe",
+              "className": "img",
+              "src": "https://image.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>
+                </li>,
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>
+                </li>,
+              ],
+              "className": "recipe-ingredients",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "spaghetti",
+                    "className": "ingredient",
+                  },
+                  "ref": null,
+                  "rendered": "spaghetti",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "meatballs",
+                    "className": "ingredient",
+                  },
+                  "ref": null,
+                  "rendered": "meatballs",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
   Symbol(enzyme.__nodes__): Array [
-    undefined,
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="recipe-title"
+          >
+            bread1
+          </h1>,
+          <div
+            className="recipe-div"
+          >
+            <img
+              alt="recipe"
+              className="img"
+              src="https://image.png"
+            />
+            <ul
+              className="recipe-ingredients"
+            >
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  spaghetti
+                </p>
+              </li>
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  meatballs
+                </p>
+              </li>
+            </ul>
+          </div>,
+        ],
+        "className": "ingredients-div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "bread1",
+            "className": "recipe-title",
+          },
+          "ref": null,
+          "rendered": "bread1",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="recipe"
+                className="img"
+                src="https://image.png"
+              />,
+              <ul
+                className="recipe-ingredients"
+              >
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>
+                </li>
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>
+                </li>
+              </ul>,
+            ],
+            "className": "recipe-div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "recipe",
+                "className": "img",
+                "src": "https://image.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <p
+                      className="ingredient"
+                    >
+                      spaghetti
+                    </p>
+                  </li>,
+                  <li>
+                    <p
+                      className="ingredient"
+                    >
+                      meatballs
+                    </p>
+                  </li>,
+                ],
+                "className": "recipe-ingredients",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p
+                      className="ingredient"
+                    >
+                      spaghetti
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "spaghetti",
+                      "className": "ingredient",
+                    },
+                    "ref": null,
+                    "rendered": "spaghetti",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p
+                      className="ingredient"
+                    >
+                      meatballs
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "meatballs",
+                      "className": "ingredient",
+                    },
+                    "ref": null,
+                    "rendered": "meatballs",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`RecipeDetails RecipeDetails component Should match the snapshot for non-matching paths 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RecipeDetails
+    breadRecipes={
+      Array [
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread1",
+        },
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread2",
+        },
+      ]
+    }
+    match={
+      Object {
+        "params": Object {
+          "name": "bk",
+        },
+        "path": "sfndk",
+      }
+    }
+    pastaRecipes={
+      Array [
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "Spaghetti and meatballs",
+        },
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "kimchi",
+        },
+      ]
+    }
+    potatoRecipes={
+      Array [
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "Spaghetti and meatballs",
+        },
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "kimchi",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "push": false,
+      "to": "/",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "push": false,
+        "to": "/",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`RecipeDetails RecipeDetails component Should match the snapshot for pasta 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RecipeDetails
+    breadRecipes={
+      Array [
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread1",
+        },
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread2",
+        },
+      ]
+    }
+    match={
+      Object {
+        "params": Object {
+          "name": "kimchi",
+        },
+        "path": "pasta",
+      }
+    }
+    pastaRecipes={
+      Array [
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "Spaghetti and meatballs",
+        },
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "kimchi",
+        },
+      ]
+    }
+    potatoRecipes={
+      Array [
+        Object {
+          "category": "potato",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "mashed potatoes",
+        },
+        Object {
+          "category": "potato",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "baked potato",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="recipe-title"
+        >
+          kimchi
+        </h1>,
+        <div
+          className="recipe-div"
+        >
+          <img
+            alt="recipe"
+            className="img"
+            src="https://image.png"
+          />
+          <ul
+            className="recipe-ingredients"
+          >
+            <li>
+              <p
+                className="ingredient"
+              >
+                spaghetti
+              </p>
+            </li>
+            <li>
+              <p
+                className="ingredient"
+              >
+                meatballs
+              </p>
+            </li>
+          </ul>
+        </div>,
+      ],
+      "className": "ingredients-div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "kimchi",
+          "className": "recipe-title",
+        },
+        "ref": null,
+        "rendered": "kimchi",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="recipe"
+              className="img"
+              src="https://image.png"
+            />,
+            <ul
+              className="recipe-ingredients"
+            >
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  spaghetti
+                </p>
+              </li>
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  meatballs
+                </p>
+              </li>
+            </ul>,
+          ],
+          "className": "recipe-div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "recipe",
+              "className": "img",
+              "src": "https://image.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>
+                </li>,
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>
+                </li>,
+              ],
+              "className": "recipe-ingredients",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "spaghetti",
+                    "className": "ingredient",
+                  },
+                  "ref": null,
+                  "rendered": "spaghetti",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "meatballs",
+                    "className": "ingredient",
+                  },
+                  "ref": null,
+                  "rendered": "meatballs",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="recipe-title"
+          >
+            kimchi
+          </h1>,
+          <div
+            className="recipe-div"
+          >
+            <img
+              alt="recipe"
+              className="img"
+              src="https://image.png"
+            />
+            <ul
+              className="recipe-ingredients"
+            >
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  spaghetti
+                </p>
+              </li>
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  meatballs
+                </p>
+              </li>
+            </ul>
+          </div>,
+        ],
+        "className": "ingredients-div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "kimchi",
+            "className": "recipe-title",
+          },
+          "ref": null,
+          "rendered": "kimchi",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="recipe"
+                className="img"
+                src="https://image.png"
+              />,
+              <ul
+                className="recipe-ingredients"
+              >
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>
+                </li>
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>
+                </li>
+              </ul>,
+            ],
+            "className": "recipe-div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "recipe",
+                "className": "img",
+                "src": "https://image.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <p
+                      className="ingredient"
+                    >
+                      spaghetti
+                    </p>
+                  </li>,
+                  <li>
+                    <p
+                      className="ingredient"
+                    >
+                      meatballs
+                    </p>
+                  </li>,
+                ],
+                "className": "recipe-ingredients",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p
+                      className="ingredient"
+                    >
+                      spaghetti
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "spaghetti",
+                      "className": "ingredient",
+                    },
+                    "ref": null,
+                    "rendered": "spaghetti",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p
+                      className="ingredient"
+                    >
+                      meatballs
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "meatballs",
+                      "className": "ingredient",
+                    },
+                    "ref": null,
+                    "rendered": "meatballs",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`RecipeDetails RecipeDetails component Should match the snapshot for potato 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RecipeDetails
+    breadRecipes={
+      Array [
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread1",
+        },
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread2",
+        },
+      ]
+    }
+    match={
+      Object {
+        "params": Object {
+          "name": "baked potato",
+        },
+        "path": "potato",
+      }
+    }
+    pastaRecipes={
+      Array [
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "Spaghetti and meatballs",
+        },
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "kimchi",
+        },
+      ]
+    }
+    potatoRecipes={
+      Array [
+        Object {
+          "category": "potato",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "mashed potatoes",
+        },
+        Object {
+          "category": "potato",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "baked potato",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h1
+          className="recipe-title"
+        >
+          baked potato
+        </h1>,
+        <div
+          className="recipe-div"
+        >
+          <img
+            alt="recipe"
+            className="img"
+            src="https://image.png"
+          />
+          <ul
+            className="recipe-ingredients"
+          >
+            <li>
+              <p
+                className="ingredient"
+              >
+                spaghetti
+              </p>
+            </li>
+            <li>
+              <p
+                className="ingredient"
+              >
+                meatballs
+              </p>
+            </li>
+          </ul>
+        </div>,
+      ],
+      "className": "ingredients-div",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": "baked potato",
+          "className": "recipe-title",
+        },
+        "ref": null,
+        "rendered": "baked potato",
+        "type": "h1",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="recipe"
+              className="img"
+              src="https://image.png"
+            />,
+            <ul
+              className="recipe-ingredients"
+            >
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  spaghetti
+                </p>
+              </li>
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  meatballs
+                </p>
+              </li>
+            </ul>,
+          ],
+          "className": "recipe-div",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "recipe",
+              "className": "img",
+              "src": "https://image.png",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>
+                </li>,
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>
+                </li>,
+              ],
+              "className": "recipe-ingredients",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "spaghetti",
+                    "className": "ingredient",
+                  },
+                  "ref": null,
+                  "rendered": "spaghetti",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "meatballs",
+                    "className": "ingredient",
+                  },
+                  "ref": null,
+                  "rendered": "meatballs",
+                  "type": "p",
+                },
+                "type": "li",
+              },
+            ],
+            "type": "ul",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h1
+            className="recipe-title"
+          >
+            baked potato
+          </h1>,
+          <div
+            className="recipe-div"
+          >
+            <img
+              alt="recipe"
+              className="img"
+              src="https://image.png"
+            />
+            <ul
+              className="recipe-ingredients"
+            >
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  spaghetti
+                </p>
+              </li>
+              <li>
+                <p
+                  className="ingredient"
+                >
+                  meatballs
+                </p>
+              </li>
+            </ul>
+          </div>,
+        ],
+        "className": "ingredients-div",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": "baked potato",
+            "className": "recipe-title",
+          },
+          "ref": null,
+          "rendered": "baked potato",
+          "type": "h1",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="recipe"
+                className="img"
+                src="https://image.png"
+              />,
+              <ul
+                className="recipe-ingredients"
+              >
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    spaghetti
+                  </p>
+                </li>
+                <li>
+                  <p
+                    className="ingredient"
+                  >
+                    meatballs
+                  </p>
+                </li>
+              </ul>,
+            ],
+            "className": "recipe-div",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "recipe",
+                "className": "img",
+                "src": "https://image.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <li>
+                    <p
+                      className="ingredient"
+                    >
+                      spaghetti
+                    </p>
+                  </li>,
+                  <li>
+                    <p
+                      className="ingredient"
+                    >
+                      meatballs
+                    </p>
+                  </li>,
+                ],
+                "className": "recipe-ingredients",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p
+                      className="ingredient"
+                    >
+                      spaghetti
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "spaghetti",
+                      "className": "ingredient",
+                    },
+                    "ref": null,
+                    "rendered": "spaghetti",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <p
+                      className="ingredient"
+                    >
+                      meatballs
+                    </p>,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "meatballs",
+                      "className": "ingredient",
+                    },
+                    "ref": null,
+                    "rendered": "meatballs",
+                    "type": "p",
+                  },
+                  "type": "li",
+                },
+              ],
+              "type": "ul",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
+
+exports[`RecipeDetails RecipeDetails component Should match the snapshot for redirect 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <RecipeDetails
+    breadRecipes={
+      Array [
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread1",
+        },
+        Object {
+          "category": "bread",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "bread2",
+        },
+      ]
+    }
+    match={
+      Object {
+        "params": Object {
+          "name": "bk",
+        },
+        "path": "sfndk",
+      }
+    }
+    pastaRecipes={Array []}
+    potatoRecipes={
+      Array [
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "Spaghetti and meatballs",
+        },
+        Object {
+          "category": "pasta",
+          "image": "https://image.png",
+          "ingredients": Array [
+            "spaghetti",
+            "meatballs",
+          ],
+          "name": "kimchi",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "push": false,
+      "to": "/",
+    },
+    "ref": null,
+    "rendered": null,
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "push": false,
+        "to": "/",
+      },
+      "ref": null,
+      "rendered": null,
+      "type": [Function],
+    },
   ],
   Symbol(enzyme.__options__): Object {
     "adapter": ReactSixteenAdapter {
