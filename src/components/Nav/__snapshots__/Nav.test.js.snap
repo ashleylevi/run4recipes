@@ -1,0 +1,589 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Nav Should match snapshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Nav />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="link"
+        >
+          <NavLink
+            activeClassName="active"
+            activeStyle={
+              Object {
+                "color": "#D5AD47",
+              }
+            }
+            aria-current="page"
+            className="nav-link"
+            to="/allRecipes"
+          >
+            All Recipes
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            activeStyle={
+              Object {
+                "color": "#D5AD47",
+              }
+            }
+            aria-current="page"
+            className="nav-link"
+            to="/pasta"
+          >
+            Pasta
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            activeStyle={
+              Object {
+                "color": "#D5AD47",
+              }
+            }
+            aria-current="page"
+            className="nav-link"
+            to="/potato"
+          >
+            Potatoes
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            activeStyle={
+              Object {
+                "color": "#D5AD47",
+              }
+            }
+            aria-current="page"
+            className="nav-link"
+            to="/bread"
+          >
+            Bread
+          </NavLink>
+          <NavLink
+            activeClassName="active"
+            activeStyle={
+              Object {
+                "color": "#D5AD47",
+              }
+            }
+            aria-current="page"
+            className="nav-link"
+            to="/favorites"
+          >
+            Favorites
+          </NavLink>
+        </div>,
+        <div
+          className="search"
+        >
+          <Connect(Search) />
+        </div>,
+      ],
+      "className": "nav-bar",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/allRecipes"
+            >
+              All Recipes
+            </NavLink>,
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/pasta"
+            >
+              Pasta
+            </NavLink>,
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/potato"
+            >
+              Potatoes
+            </NavLink>,
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/bread"
+            >
+              Bread
+            </NavLink>,
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/favorites"
+            >
+              Favorites
+            </NavLink>,
+          ],
+          "className": "link",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "activeStyle": Object {
+                "color": "#D5AD47",
+              },
+              "aria-current": "page",
+              "children": "All Recipes",
+              "className": "nav-link",
+              "to": "/allRecipes",
+            },
+            "ref": null,
+            "rendered": "All Recipes",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "activeStyle": Object {
+                "color": "#D5AD47",
+              },
+              "aria-current": "page",
+              "children": "Pasta",
+              "className": "nav-link",
+              "to": "/pasta",
+            },
+            "ref": null,
+            "rendered": "Pasta",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "activeStyle": Object {
+                "color": "#D5AD47",
+              },
+              "aria-current": "page",
+              "children": "Potatoes",
+              "className": "nav-link",
+              "to": "/potato",
+            },
+            "ref": null,
+            "rendered": "Potatoes",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "activeStyle": Object {
+                "color": "#D5AD47",
+              },
+              "aria-current": "page",
+              "children": "Bread",
+              "className": "nav-link",
+              "to": "/bread",
+            },
+            "ref": null,
+            "rendered": "Bread",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "activeClassName": "active",
+              "activeStyle": Object {
+                "color": "#D5AD47",
+              },
+              "aria-current": "page",
+              "children": "Favorites",
+              "className": "nav-link",
+              "to": "/favorites",
+            },
+            "ref": null,
+            "rendered": "Favorites",
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Connect(Search) />,
+          "className": "search",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {},
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="link"
+          >
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/allRecipes"
+            >
+              All Recipes
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/pasta"
+            >
+              Pasta
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/potato"
+            >
+              Potatoes
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/bread"
+            >
+              Bread
+            </NavLink>
+            <NavLink
+              activeClassName="active"
+              activeStyle={
+                Object {
+                  "color": "#D5AD47",
+                }
+              }
+              aria-current="page"
+              className="nav-link"
+              to="/favorites"
+            >
+              Favorites
+            </NavLink>
+          </div>,
+          <div
+            className="search"
+          >
+            <Connect(Search) />
+          </div>,
+        ],
+        "className": "nav-bar",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                activeStyle={
+                  Object {
+                    "color": "#D5AD47",
+                  }
+                }
+                aria-current="page"
+                className="nav-link"
+                to="/allRecipes"
+              >
+                All Recipes
+              </NavLink>,
+              <NavLink
+                activeClassName="active"
+                activeStyle={
+                  Object {
+                    "color": "#D5AD47",
+                  }
+                }
+                aria-current="page"
+                className="nav-link"
+                to="/pasta"
+              >
+                Pasta
+              </NavLink>,
+              <NavLink
+                activeClassName="active"
+                activeStyle={
+                  Object {
+                    "color": "#D5AD47",
+                  }
+                }
+                aria-current="page"
+                className="nav-link"
+                to="/potato"
+              >
+                Potatoes
+              </NavLink>,
+              <NavLink
+                activeClassName="active"
+                activeStyle={
+                  Object {
+                    "color": "#D5AD47",
+                  }
+                }
+                aria-current="page"
+                className="nav-link"
+                to="/bread"
+              >
+                Bread
+              </NavLink>,
+              <NavLink
+                activeClassName="active"
+                activeStyle={
+                  Object {
+                    "color": "#D5AD47",
+                  }
+                }
+                aria-current="page"
+                className="nav-link"
+                to="/favorites"
+              >
+                Favorites
+              </NavLink>,
+            ],
+            "className": "link",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "activeStyle": Object {
+                  "color": "#D5AD47",
+                },
+                "aria-current": "page",
+                "children": "All Recipes",
+                "className": "nav-link",
+                "to": "/allRecipes",
+              },
+              "ref": null,
+              "rendered": "All Recipes",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "activeStyle": Object {
+                  "color": "#D5AD47",
+                },
+                "aria-current": "page",
+                "children": "Pasta",
+                "className": "nav-link",
+                "to": "/pasta",
+              },
+              "ref": null,
+              "rendered": "Pasta",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "activeStyle": Object {
+                  "color": "#D5AD47",
+                },
+                "aria-current": "page",
+                "children": "Potatoes",
+                "className": "nav-link",
+                "to": "/potato",
+              },
+              "ref": null,
+              "rendered": "Potatoes",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "activeStyle": Object {
+                  "color": "#D5AD47",
+                },
+                "aria-current": "page",
+                "children": "Bread",
+                "className": "nav-link",
+                "to": "/bread",
+              },
+              "ref": null,
+              "rendered": "Bread",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "activeStyle": Object {
+                  "color": "#D5AD47",
+                },
+                "aria-current": "page",
+                "children": "Favorites",
+                "className": "nav-link",
+                "to": "/favorites",
+              },
+              "ref": null,
+              "rendered": "Favorites",
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Connect(Search) />,
+            "className": "search",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {},
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
