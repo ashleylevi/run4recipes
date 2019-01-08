@@ -21,5 +21,5 @@ Users can view various recipes either by category type or by searching. Users ca
 
 * Clone down this repo:
 * Run npm install from the root directory.
-* Run npm start
+* Run npm start.
 * Run tests with npm test.
