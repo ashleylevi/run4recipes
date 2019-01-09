@@ -49,6 +49,12 @@ a {
   margin: 20px 0 10px 0;
 }
 
+.recipe-name:hover {
+  cursor: pointer;
+  color: #D5AD47;
+  transition: 0.3s;
+}
+
 .fa-heart {
   margin: 0 auto;
   font-size: 30px;
