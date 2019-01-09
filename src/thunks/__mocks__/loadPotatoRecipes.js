@@ -1,0 +1,1 @@
+export const fetchPotatoThunk = jest.fn().mockImplementation(() => 'potato thunk')

@@ -23,6 +23,7 @@ export class RecipeCard extends Component{
   }
 
   toggleFavorite = () => {
+    console.log('toggling')
     const { isFavorite } = this.state;
     this.setState({
       isFavorite: !isFavorite
@@ -48,7 +49,6 @@ export class RecipeCard extends Component{
       }
     this.toggleFavorite();
     updateFavorites();
-
   } 
   
    
