@@ -1,0 +1,1 @@
+export const fetchPastaThunk = jest.fn().mockImplementation(() => 'pasta thunk')

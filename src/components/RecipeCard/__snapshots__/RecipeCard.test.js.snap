@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`RecipeCard Should match the snapshot snapshot 1`] = `
+exports[`RecipeCard Should match the snapshot 1`] = `
 ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <RecipeCard
     recipe={
       Object {
-        "category": "bread",
+        "category": "spaghetti",
         "image": "https://image.png",
-        "ingredientLines": Array [],
-        "label": "Spaghetti and meatballs",
+        "ingredients": Array [
+          "spaghetti",
+          "meatballs",
+        ],
+        "name": "Spaghetti and meatballs",
       }
     }
+    updateFavorites={[MockFunction]}
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -35,7 +39,9 @@ ShallowWrapper {
         >
           <p
             className="recipe-name"
-          />
+          >
+            Spaghetti and meatballs
+          </p>
           <i
             className="far fa-heart"
             onClick={[Function]}
@@ -68,7 +74,9 @@ ShallowWrapper {
           "children": Array [
             <p
               className="recipe-name"
-            />,
+            >
+              Spaghetti and meatballs
+            </p>,
             <i
               className="far fa-heart"
               onClick={[Function]}
@@ -83,11 +91,11 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "host",
             "props": Object {
-              "children": undefined,
+              "children": "Spaghetti and meatballs",
               "className": "recipe-name",
             },
             "ref": null,
-            "rendered": null,
+            "rendered": "Spaghetti and meatballs",
             "type": "p",
           },
           Object {
@@ -123,7 +131,9 @@ ShallowWrapper {
           >
             <p
               className="recipe-name"
-            />
+            >
+              Spaghetti and meatballs
+            </p>
             <i
               className="far fa-heart"
               onClick={[Function]}
@@ -156,7 +166,9 @@ ShallowWrapper {
             "children": Array [
               <p
                 className="recipe-name"
-              />,
+              >
+                Spaghetti and meatballs
+              </p>,
               <i
                 className="far fa-heart"
                 onClick={[Function]}
@@ -171,11 +183,11 @@ ShallowWrapper {
               "key": undefined,
               "nodeType": "host",
               "props": Object {
-                "children": undefined,
+                "children": "Spaghetti and meatballs",
                 "className": "recipe-name",
               },
               "ref": null,
-              "rendered": null,
+              "rendered": "Spaghetti and meatballs",
               "type": "p",
             },
             Object {
