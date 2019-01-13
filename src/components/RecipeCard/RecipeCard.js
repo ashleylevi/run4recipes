@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './RecipeCard.css';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 export class RecipeCard extends Component{
   constructor(props) {
@@ -23,7 +24,6 @@ export class RecipeCard extends Component{
   }
 
   toggleFavorite = () => {
-    console.log('toggling')
     const { isFavorite } = this.state;
     this.setState({
       isFavorite: !isFavorite
@@ -53,7 +53,7 @@ export class RecipeCard extends Component{
   
    
   render() {
-    const { recipe } = this.props;
+    const { recipe, path } = this.props;
     const { isFavorite } = this.state;
     let heart;
     if (!isFavorite) {
@@ -65,7 +65,7 @@ export class RecipeCard extends Component{
       <div className="recipe-card" style={{ backgroundImage: `url(${recipe.image})` }}>
         <div className="gradient"></div>
         <div className="favorites-box">
-          <p className="recipe-name">{recipe.name}</p>
+          <Link to={path}><p className="recipe-name">{recipe.name}</p></Link>
           <i className={heart} onClick={this.handleClick}></i>
         </div>
         
@@ -76,5 +76,6 @@ export class RecipeCard extends Component{
 
 RecipeCard.propTypes = {
   recipe: PropTypes.object,
-  updateFavorites: PropTypes.func
+  updateFavorites: PropTypes.func,
+  path: PropTypes.string
 }
