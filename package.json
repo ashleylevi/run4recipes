@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "homepage": "http://ashleylevi.github.io/run4recipes",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-browser-router": "^2.1.2",
