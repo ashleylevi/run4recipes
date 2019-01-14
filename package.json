@@ -1,5 +1,6 @@
 {
   "name": "run4recipes",
+  "homepage": "http://ashleylevi.github.io/run4recipes",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -13,8 +14,7 @@
     "react-uid": "^2.2.0",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.7",
-    "redux-thunk": "^2.3.0",
-    "homepage": "http://ashleylevi.github.io/run4recipes"
+    "redux-thunk": "^2.3.0"
   },
   "scripts": {
     "start": "react-scripts start",
